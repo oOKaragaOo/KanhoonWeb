@@ -1,0 +1,138 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;  
+
+}
+hr{
+    width: 80%;
+    margin: auto;
+}
+
+/*---------- LAY OUT MAIN --------------------*/
+.main{
+    margin: auto;
+    display: grid;
+
+    grid-template-areas: 
+        'menu header  header   header  sideber sideber'
+        'menu content content  content sideber sideber'
+        'menu content2 content2  content2 sideber sideber'
+    ;
+    width: 95%;
+    background-color: aqua;
+}
+.menu li{
+    list-style: none;
+}
+a{
+    color: black;
+    text-decoration:none;
+}
+nav{
+    min-width: 80px;
+
+    grid-area: menu;
+    background-color: aquamarine;
+}
+nav img{
+    display: block;
+    margin: auto;
+}
+.secter_1{
+    display: grid;
+    grid-area: header;
+    place-items: center center ;
+    background-color: bisque;
+    min-width: 480px;
+}
+.secter_1 .search-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(175, 114, 23);
+    width: 50%;
+    min-width: 380px;
+    height: 35px;
+    margin-top: 1rem;
+}      
+.secter_1 .tag-box{
+    width: 100%;
+    min-width: 380px;
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    background-color: aquamarine;
+    margin: 1rem;
+}
+.tag-box > span{
+    margin: 2px 18px;
+    padding: 5px;
+}
+.content{          
+    grid-area: content;
+    background-color: blue;
+    width: 100%;
+    min-width: 200px;
+}
+
+.content .hot-content{
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    max-width: 100%;
+    min-width: 200px;
+    justify-content: center;
+    align-content: center;
+    padding: 1rem;
+    
+}
+.content .hot-content iframe{            
+    width: 800px;
+    min-width: 480px;
+    height: 450px;
+}
+.blog-content{
+    max-height: 450px;
+    min-width: 280px;
+    width: auto;
+    background-color: aliceblue;
+}
+.foot-content{
+    background-color: aqua;
+    width: auto;
+    min-width: 480px;
+}
+#view-cont{
+    width: 100%;
+    max-height: 82vh;
+}
+#view-cont iframe{
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: 82vh;
+    min-width: 200px;
+}
+/*-------------SIDEBARS-----------------*/
+
+.sideber{
+    display: block;
+    min-width: 150px;
+    grid-area: sideber;
+    background-color: brown;
+}
+
+.sideber .button-box{
+    background-color: aliceblue;
+    width: 70%;
+    text-align: center;
+    border: 1px solid black;
+    margin: 0.5rem auto 0.5rem auto;
+    padding: 5px;
+}
+:hover.button-box {
+    background-color: aquamarine;
+    
+}
